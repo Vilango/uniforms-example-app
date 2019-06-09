@@ -8,6 +8,9 @@
 
 This repository shows basic usage of [uniforms](https://github.com/vazco/uniforms/).
 
+With the uniforms-polaris package
+[uniforms-polaris](https://github.com/vilango/uniforms/packages/uniforms-polaris).
+
 For more info visit [official docs](https://github.com/vazco/uniforms/blob/master/INTRODUCTION.md).
 
 ## Starting the app
