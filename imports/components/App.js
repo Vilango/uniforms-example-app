@@ -10,6 +10,7 @@ import {
 
 import { BlogPostBridge } from "/imports/api/schema";
 import { Form, FormLayout } from "@shopify/polaris";
+import { SelectComponentForm } from "./SelectComponentForm";
 
 // import SimpleForm from "./SimpleForm";
 // import CustomForm from "./CustomForm";
@@ -64,7 +65,7 @@ const PopulatedForm = () => {
 };
 
 export const App = () => {
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState(3);
   const [result, setResult] = useState("");
 
   const tabs = [
@@ -85,6 +86,12 @@ export const App = () => {
       content: "Populated Form",
       panelID: "populated-form-content",
       component: PopulatedForm
+    },
+    {
+      id: "selectcomponent-form",
+      content: "Form with select field",
+      panelID: "form-with-select-field",
+      component: SelectComponentForm
     }
   ];
   const Comp = tabs[selected].component;

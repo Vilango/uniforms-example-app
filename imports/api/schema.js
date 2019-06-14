@@ -19,11 +19,16 @@ export const BlogPostSchema = new SimpleSchema({
     uniforms: {
     }
   }
-  // status: {
-  //     type: String,
-  //     allowedValues: ['draft', 'published'],
-  //     defaultValue: 'draft'
-  // },
 });
 
 export const BlogPostBridge = new SimpleSchema2Bridge(BlogPostSchema);
+
+export const SelectComponentSchema = new SimpleSchema({
+  status: {
+      type: String,
+      allowedValues: ['draft', 'published'],
+      defaultValue: 'draft'
+  },
+});
+
+export const SelectComponentBridge = new SimpleSchema2Bridge(SelectComponentSchema);
