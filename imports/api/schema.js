@@ -25,10 +25,25 @@ export const BlogPostBridge = new SimpleSchema2Bridge(BlogPostSchema);
 
 export const SelectComponentSchema = new SimpleSchema({
   status: {
-      type: String,
-      allowedValues: ['draft', 'published'],
-      defaultValue: 'draft'
+    type: String,
+    allowedValues: ['draft', 'published'],
+    defaultValue: 'draft'
   },
+  settingToggle: {
+    type: Boolean,
+    defaultValue: true,
+    uniforms: {
+      actionContent: {
+        true: 'Disable',
+        false: 'Enable'
+      },
+      statusContent: {
+        true: 'enabled',
+        false: 'disabled'
+      },
+      text: 'This setting is'
+    }
+  }
 });
 
 export const SelectComponentBridge = new SimpleSchema2Bridge(SelectComponentSchema);

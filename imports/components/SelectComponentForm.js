@@ -3,14 +3,14 @@ import {
   AutoForm,
   SubmitField,
   ErrorsField,
-  SelectField
+  SelectField,
+  SettingToggleField
 } from "uniforms-polaris";
 
 import { SelectComponentBridge } from "/imports/api/schema";
 
 export const SelectComponentForm = ({ onSubmit }) => {
     const model = { };
-    // const model = {};
     console.log("SimpleForm", SelectComponentBridge);
     return (
       <React.Fragment>
@@ -18,9 +18,10 @@ export const SelectComponentForm = ({ onSubmit }) => {
           schema={SelectComponentBridge}
           onSubmit={onSubmit}
           model={model}
-          showInlineError={true}
+          showInlineError
         >
           <SelectField key={"status"} name="status" />
+          <SettingToggleField name="settingToggle" />
   
           <SubmitField label="Save" />
           <ErrorsField />
