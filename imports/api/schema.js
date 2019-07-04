@@ -27,6 +27,16 @@ export const SelectComponentSchema = new SimpleSchema({
   status: {
     type: String,
     allowedValues: ['draft', 'published'],
+    uniforms: {
+      options: [
+        {value: 'draft', label: "Draft!", disabled: true, },
+        {value: 'published', label: "Published" }
+      ],
+      xoptions: [
+        {value: 'draft', label: "Draft!", disabled: true, },
+        {value: 'published', label: "Published" }
+      ]
+    },
     defaultValue: 'draft'
   },
   settingToggle: {

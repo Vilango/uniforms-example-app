@@ -11,6 +11,7 @@ import {
 import { BlogPostBridge } from "/imports/api/schema";
 import { Form, FormLayout } from "@shopify/polaris";
 import { SelectComponentForm } from "./SelectComponentForm";
+import { AvailableTypesForm } from "./AvailableTypesForm";
 
 // import SimpleForm from "./SimpleForm";
 // import CustomForm from "./CustomForm";
@@ -65,7 +66,7 @@ const PopulatedForm = () => {
 };
 
 export const App = () => {
-  const [selected, setSelected] = useState(3);
+  const [selected, setSelected] = useState(1);
   const [result, setResult] = useState("");
 
   const tabs = [
@@ -74,6 +75,12 @@ export const App = () => {
       content: "Simple Form",
       panelID: "simple-form-content",
       component: SimpleForm
+    },
+    {
+      id: "available-types-form",
+      content: "AvailableTypesForm",
+      panelID: "available-types-form-content",
+      component: AvailableTypesForm
     },
     {
       id: "customized-form",
