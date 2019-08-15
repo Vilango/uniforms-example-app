@@ -38,7 +38,11 @@ const SimpleForm = ({ onSubmit }) => {
           </div>
         </div>
 
-        <FormLayout>
+        <FormLayout _={Math.random()}>
+          <AutoField name="title" helperText="Helper" />
+        </FormLayout>
+
+        <FormLayout >
           <AutoField name="title" helperText="Helper" />
         </FormLayout>
 
