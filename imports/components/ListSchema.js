@@ -7,6 +7,7 @@ export const ListSchema = new SimpleSchema({
   '_listArray.$': Object,
   '_listArray.$.zip': String,
   '_listArray.$.city': String,
+  '_listArray.$.no': String
 });
 
 export const ListBridge = new SimpleSchema2Bridge(
