@@ -6,7 +6,7 @@ import {
   ErrorsField,
   SelectField
 } from "uniforms-polaris";
-import { TextField, Select } from "@shopify/polaris";
+import { TextField, Select, Button } from "@shopify/polaris";
 
 import { ListBridge } from "./ListSchema";
 import connectField from "uniforms/connectField";
@@ -92,9 +92,9 @@ const ListItemAddBare = ({ onChange, value }) => {
         value={selectedParticipation}
         onChange={value => setSelectedParticipation(value)}
       />
-      <button onClick={() => addParticipation()}>
+      <Button onClick={() => addParticipation()}>
         add
-      </button>
+      </Button>
     </div>
   );
 };
