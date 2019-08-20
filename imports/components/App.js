@@ -13,6 +13,8 @@ import { Form, FormLayout } from "@shopify/polaris";
 import { SelectComponentForm } from "./SelectComponentForm";
 import { AvailableTypesForm } from "./AvailableTypesForm";
 import { ListForm } from "./ListForm";
+import { ParticipationList } from "./ParticipationList";
+import { ParticipationAdd } from "./ParticipationAdd";
 
 // import SimpleForm from "./SimpleForm";
 // import CustomForm from "./CustomForm";
@@ -86,6 +88,18 @@ export const App = () => {
       content: "List Form",
       panelID: "list-form-content",
       component: ListForm
+    }, 
+    {
+      id: "participation-list-form",
+      content: "Participation List Form",
+      panelID: "participation-list-form-content",
+      component: ParticipationList
+    }, 
+    {
+      id: "participation-add-form",
+      content: "Participation Add Form",
+      panelID: "participation-add-form-content",
+      component: ParticipationAdd
     },    
     {
       id: "available-types-form",
